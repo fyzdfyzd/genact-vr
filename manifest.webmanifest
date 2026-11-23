@@ -1,0 +1,10 @@
+{
+  "name": "Lăng Kính VR GenAct – Truy tìm con số",
+  "short_name": "VR GenAct",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FBF3E8",
+  "theme_color": "#F28C28",
+  "icons": [{"src": "icon-512.png", "sizes": "512x512", "type": "image/png"}]
+}
