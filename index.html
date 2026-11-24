@@ -28,7 +28,7 @@
 <body>
 <div id="batdau">
   <h1>LĂNG KÍNH VR · GenAct</h1>
-  <p>Phòng triển lãm 10 con số biết nói, kèm trò chơi <b>Truy tìm con số</b> trong 90 giây.<br>
+  <p>Phòng triển lãm 10 con số biết nói, kèm trò chơi <b>Truy tìm con số</b>: mỗi lượt rút 1 câu ngẫu nhiên trong 10 câu, tìm poster có con số đúng trong 45&nbsp;giây.<br>
      Trỏ tia xuống sàn rồi bóp cò để dịch chuyển. Trỏ vào poster rồi bóp cò để chọn.</p>
   <button id="nutVR">VÀO VR</button>
   <button id="nut2D" class="phu">Xem trên màn hình (không kính)</button>
@@ -403,7 +403,7 @@
   }
 
   // ===== Trò chơi "Truy tìm con số" =====
-  var SO_CAU = 5, THOI_GIAN = 90;
+  var SO_CAU = 1, THOI_GIAN = 45;
   var tc = {trangThai:'cho', ds:[], cau:0, diem:0, batDauLuc:0, khoa:false, hetGioLuc:false};
   function tron(a){ for (var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; } return a; }
   function hienLop(ten){
@@ -459,7 +459,7 @@
     hetGio ? keu('het') : keu('xong');
     hetGio_set(hetGio);
     veKet(tc.diem+'/'+SO_CAU);
-    datSrc(khen, tc.diem >= 4 ? 'khen-3' : (tc.diem >= 2 ? 'khen-2' : 'khen-1'));
+    datSrc(khen, tc.diem >= SO_CAU ? 'khen-3' : 'khen-1'); // đúng: khen cao nhất; sai hoặc hết giờ: động viên
     hienLop('ket');
   }
   function hetGio_set(h){ hetGio.setAttribute('visible', !!h); }

@@ -1,5 +1,5 @@
 // Lưu sẵn trang, A-Frame, 10 poster và chữ để mở lại khi mất Wi-Fi
-var KHO = 'vr-genact-v2-1';
+var KHO = 'vr-genact-v2-2-1cau';
 var TEP = ['./', './index.html', './lib/aframe.min.js', './manifest.webmanifest', './icon-512.png'];
 ['tieu-de','dong','troi','tro-choi','luat','di-chuyen','nut-bat-dau','nut-choi-lai','nhan-cau','nhan-giay','nhan-diem',
  'dung','sai','ket-qua','het-gio','cau-dung','khen-1','khen-2','khen-3','moi-tham-quan'].forEach(function (t) { TEP.push('./chu/' + t + '.png'); });
